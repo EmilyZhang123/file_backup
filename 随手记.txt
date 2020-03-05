@@ -1,0 +1,16 @@
+git config template 
+git cz
+git checkout -b dev origin/dev //clone分支代码
+
+需UI
+1、无数据的图片
+2、404的页面
+
+mutation-types
+
+云GIS2.0缺陷用公司搭建的禅道进行管理
+访问地址：http://www.zentao.net/download/p2.html
+访问方式：
+1.浏览器输入访问地址后，首先输入用户名：zentao ，密码：123456登录
+2.接着输入自己的用户名登录即可，所有人用户名为：公司邮箱不带后缀，初始密码为：@51bsi.com
+
