@@ -2,11 +2,19 @@ git config template
 git cz
 git checkout -b dev origin/dev //clone分支代码
 
+创建文件夹：mkdir
+查看端口使用情况：netstat -ano
+杀死进程：taskkill /pid (id) -f
+
+密码修改：https://self.51bsi.com/BSIPM/PersonMgr/PWD
+
 需UI
 1、无数据的图片
 2、404的页面
 
-mutation-types
+前端页面开发；前端规范化：代码，webgis代码，组件标准化的封装（方法，参数命名）；二维开发
+
+坐标系选择
 
 云GIS2.0缺陷用公司搭建的禅道进行管理
 访问地址：http://www.zentao.net/download/p2.html
@@ -14,3 +22,8 @@ mutation-types
 1.浏览器输入访问地址后，首先输入用户名：zentao ，密码：123456登录
 2.接着输入自己的用户名登录即可，所有人用户名为：公司邮箱不带后缀，初始密码为：@51bsi.com
 
+
+图形界面vue脚手架的优点直观简单，运行速度慢，命令行界面，快，熟悉命令
+
+geom编辑删除字段，添加删除索引取消
+数据管理添加图层逻辑样式修改

@@ -1,0 +1,8 @@
+// Gis
+openlayers： 
+全球坐标系统：https://epsg.io/
+
+// 前端规范
+vue 规范： https://cn.vuejs.org/v2/style-guide/
+Google JavaScript 规范： https://google.github.io/styleguide/jsguide.html#terminology-notes
+
