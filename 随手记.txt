@@ -4,9 +4,17 @@ git checkout -b dev origin/dev //clone分支代码
 
 创建文件夹：mkdir
 查看端口使用情况：netstat -ano
+查看8080端口被哪个进程占用 netstat -ano | findstr "8080"
+查看进程号5768对应的进程 tasklist | findstr "5768"
+结束javaw.exe 进程 taskkill /f /t /im javaw.exe  (/f 强制终止  /t 终止指定进程和它启动的子进程  /im 指定要终止的进程映像名称)
 杀死进程：taskkill /pid (id) -f
 
 密码修改：https://self.51bsi.com/BSIPM/PersonMgr/PWD
+
+连接服务器 ssh admin@192.168.7.22
+
+解压压缩文件 unzip  -o  dist.zip (解压并覆盖)
+
 
 需UI
 1、无数据的图片
