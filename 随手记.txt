@@ -1,7 +1,31 @@
+     ********** git **************
 git config template 
 git cz
 git checkout -b dev origin/dev //clone分支代码
+git merge <branchName> --no-ff 禁止快进式合并
+git log --graph --oneline  //输出图形
+git branch -d <branchName> 删除分支
+git branch -D  <branchName> //强制删除
+git push origin -d <branchName> //删除远程分支
+git tag // 列出所有的tag
+git tag -a <tagName> -m "备注“ // 给最新的commit打tag
+git tag -a <tagName> <commitId> -m "备注" 
+git push origin --tags // 推送所有的tag 
+git push origin <tagName> // 推送单个tag
+git tag -d <tagName>  // 删除某个tag
+git push origin -d tag <tag_name> // 删除远程分支
 
+    ********** git **************
+	
+	*********** vi **********
+<i|insert> 进入输入模式
+<ESC> 结束输入模式
+:q! 退出vim,并放弃编辑内容
+:wq | :x | zz 保存编辑，并退出
+:w 保存
+	*********** vi **********
+
+     ********命令行********
 创建文件夹：mkdir
 查看端口使用情况：netstat -ano
 查看8080端口被哪个进程占用 netstat -ano | findstr "8080"
@@ -9,29 +33,54 @@ git checkout -b dev origin/dev //clone分支代码
 结束javaw.exe 进程 taskkill /f /t /im javaw.exe  (/f 强制终止  /t 终止指定进程和它启动的子进程  /im 指定要终止的进程映像名称)
 杀死进程：taskkill /pid (id) -f
 
-密码修改：https://self.51bsi.com/BSIPM/PersonMgr/PWD
-
 连接服务器 ssh admin@192.168.7.22
-
 解压压缩文件 unzip  -o  dist.zip (解压并覆盖)
+      *******命令行********
 
-
+      *******公司********
 需UI
 1、无数据的图片
 2、404的页面
 
-前端页面开发；前端规范化：代码，webgis代码，组件标准化的封装（方法，参数命名）；二维开发
 
-坐标系选择
+版本文档思路;
+1、开发人员定期交叉自测功能稳定与否
+2、开发功能合并到master打tag
+3、feature 分支开发
+4、dev分支
+5、bug分支
+
+数据库备份接口对接：
+已完成：
+1、数据库数据资源的数据库和资源列表获取
+有问题：
+1、接口地址：http://192.168.7.22:9010/api/bakup/queryPage
+备份记录获取接口，自动备份任务返回没有备份的周期、清理阈值、执行时间、是否启用数据
+2、删除备份任务接口：http://192.168.7.22:9010/api/bakup/delete
+返回删除成功，但是刷新备份记录，删除的记录依然存在
+3、已完成备份接口：http://192.168.7.22:9010/api/bakup/dataListPage
+返回数据有问题
+未开发：
+1、
+四月工作：
+前端页面开发；前端规范化：代码，webgis代码，组件标准化的封装（方法，参数命名）；二维开发
+负责前端页面开发和前端规范化（代码、组件标准化封装）
+数据库备份接口，
+vue培训，
+单体化前端优化，
+页面刷新状态保持，
+版本稳定
+
+密码修改：https://self.51bsi.com/BSIPM/PersonMgr/PWD
+打印机 \\192.168.100.252
+tomcat部署前端: /conf/server.xml
+tomcat重启：（bin下）关闭./shutdown.sh  开启./startup.sh
 
 云GIS2.0缺陷用公司搭建的禅道进行管理
 访问地址：http://www.zentao.net/download/p2.html
 访问方式：
 1.浏览器输入访问地址后，首先输入用户名：zentao ，密码：123456登录
 2.接着输入自己的用户名登录即可，所有人用户名为：公司邮箱不带后缀，初始密码为：@51bsi.com
+      ******公司********
 
 
-图形界面vue脚手架的优点直观简单，运行速度慢，命令行界面，快，熟悉命令
-
-geom编辑删除字段，添加删除索引取消
-数据管理添加图层逻辑样式修改

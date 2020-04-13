@@ -7,3 +7,14 @@ vue 规范： https://cn.vuejs.org/v2/style-guide/
 Google JavaScript 规范： https://google.github.io/styleguide/jsguide.html#terminology-notes
 JavaScript标准样式： https://standardjs.com/
 
+class Person {
+	private _name:string;
+	constructor(){}
+	getName(){
+		return this_name;
+	}
+	setName(name) {
+		this._name = name;
+	}
+}
+
