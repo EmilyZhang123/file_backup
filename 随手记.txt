@@ -14,6 +14,7 @@ git push origin --tags // 推送所有的tag
 git push origin <tagName> // 推送单个tag
 git tag -d <tagName>  // 删除某个tag
 git push origin -d tag <tag_name> // 删除远程分支
+git remote show origin 
 
     ********** git **************
 	
@@ -43,12 +44,6 @@ git push origin -d tag <tag_name> // 删除远程分支
 2、404的页面
 
 
-版本文档思路;
-1、开发人员定期交叉自测功能稳定与否
-2、开发功能合并到master打tag
-3、feature 分支开发
-4、dev分支
-5、bug分支
 
 数据库备份接口对接：
 已完成：

@@ -1,0 +1,84 @@
+//清楚html默认样式
+ * { margin: 0;padding: 0;box-sizing: border-box; }
+    html, body { min-height: 100%;overflow: hidden; }
+    body { font-family: "Microsoft YaHei"; font-size: 16px; color: #333; }
+    h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+    ul, ol { list-style: none; }
+    img { border: none;vertical-align: middle; }
+    a { text-decoration: none;color: #232323; }
+    table { border-collapse: collapse;table-layout: fixed; }
+
+// 文字两端对齐
+text-align-last: justify; 
+·text-align: justify;
+	
+// 滚动条修改 
+ /deep/ *::-webkit-scrollbar {
+    display: none;
+  } 
+  
+//element-table 样式修改
+ 
+// 表格背景，字体颜色
+   /deep/.el-table{
+    background: rgba(0,0,0,0);
+    color: #81c0da;
+  }
+// 表格最下面的线
+  /deep/.el-table::before {
+    height: 0;
+  }
+
+  /deep/.el-table th, /deep/.el-table tr {
+    padding:  0;
+    background-color: rgba(0,0,0,0);
+    color: #81c0da;
+    border: none;
+  }
+  /deep/.el-table tbody tr:hover>td {
+    background-color: hsla(0,0%,100%,.1)!important;
+  }
+  /deep/.el-table td {
+    border: none;
+    padding: 5px 0;
+  }
+  /deep/ *::-webkit-scrollbar {
+    display: none;
+  }
+
+ 
+// flex弹性布局下，项内容过大导致div被撑开
+方案一，设置
+flex:1;
+width:1px;// or height:1px;
+方案二
+flex-wrap: wrap;
+-webkit-wrap:wrap;
+overflow:scroll;
+
+vuex module 
+this.$store.state.module.key
+this.$store.getters['module/key']
+this.$store.disptch('module/key')
+
+// 获取过去某一天到今天的所有天数数组
+ function pickDate(opt){
+    var minTime = +new Date(opt.minTime);//计算2019/5/20的时间，精确到毫秒
+    var oneDay = 24 * 3600 * 1000; //计算一天的时间，精确到毫秒 86400000
+    var date = [];
+    var today =  +new Date(new Date().toLocaleDateString().split('/').join(','));
+    var date_len = (today-minTime)/oneDay;//今天距离某一天的天数
+    var now = new Date(minTime);
+    
+    for (var i = 0; i < date_len; i++) {
+      now = [now.getFullYear(), now.getMonth()+1, now.getDate()].join('-');
+      date.push(now);
+      now = new Date(+new Date(now) + oneDay);
+    }
+    date.push(new Date().toLocaleDateString().split('/').join('-'));
+    console.log(date)
+  }
+
+  pickDate({
+    minTime:'2019,4,26'
+  })
