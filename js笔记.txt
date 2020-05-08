@@ -1,0 +1,38 @@
+Object.prototype.toString.call() 判断数据类型
+https://www.cnblogs.com/cn-chy-com/p/11524980.html
+Object.prototype.toString.call(value)
+1.判断基本类型：
+
+Object.prototype.toString.call(null);//”[object Null]”
+Object.prototype.toString.call(undefined);//”[object Undefined]”
+Object.prototype.toString.call(“abc”);//”[object String]”
+Object.prototype.toString.call(123);//”[object Number]”
+Object.prototype.toString.call(true);//”[object Boolean]”
+2.判断原生引用类型：
+
+函数类型
+Function fn(){console.log(“test”);}
+Object.prototype.toString.call(fn);//”[object Function]”
+日期类型
+var date = new Date();
+Object.prototype.toString.call(date);//”[object Date]”
+数组类型
+var arr = [1,2,3];
+Object.prototype.toString.call(arr);//”[object Array]”
+正则表达式
+var reg = /[hbc]at/gi;
+Object.prototype.toString.call(arr);//”[object RegExp]”
+自定义类型
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+var person = new Person("Rose", 18);
+Object.prototype.toString.call(person); //”[object Object]”
+很明显这种方法不能准确判断person是Person类的实例，而只能用instanceof 操作符来进行判断，如下所示：
+console.log(person instanceof Person);//输出结果为true
+3.判断原生JSON对象：
+
+var isNativeJSON = window.JSON && Object.prototype.toString.call(JSON);
+console.log(isNativeJSON);//输出结果为”[object JSON]”说明JSON是原生的，否则不是
+

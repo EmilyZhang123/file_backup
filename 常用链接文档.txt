@@ -7,6 +7,7 @@ vue 规范： https://cn.vuejs.org/v2/style-guide/
 Google JavaScript 规范： https://google.github.io/styleguide/jsguide.html#terminology-notes
 JavaScript标准样式： https://standardjs.com/
 
+//构造函数
 class Person {
 	private _name:string;
 	constructor(){}
@@ -18,3 +19,17 @@ class Person {
 	}
 }
 
+// 自动布局器
+http://lowcode.magicalcoder.com/element?from=oschina
+
+https://interactjs.io/docs/resizable/
+
+右下（x+,y+）
+右上（x+,y-）
+左下（x-,y+）
+坐上（x-,y-）
+
+height: 70
+left: 624
+top: 210
+width: 113

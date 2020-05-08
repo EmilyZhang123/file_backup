@@ -59,26 +59,9 @@ overflow:scroll;
 vuex module 
 this.$store.state.module.key
 this.$store.getters['module/key']
-this.$store.disptch('module/key')
+this.$store.disptch('module/key',parmas)
+this.$store.comiit('module/key',params)
 
-// 获取过去某一天到今天的所有天数数组
- function pickDate(opt){
-    var minTime = +new Date(opt.minTime);//计算2019/5/20的时间，精确到毫秒
-    var oneDay = 24 * 3600 * 1000; //计算一天的时间，精确到毫秒 86400000
-    var date = [];
-    var today =  +new Date(new Date().toLocaleDateString().split('/').join(','));
-    var date_len = (today-minTime)/oneDay;//今天距离某一天的天数
-    var now = new Date(minTime);
-    
-    for (var i = 0; i < date_len; i++) {
-      now = [now.getFullYear(), now.getMonth()+1, now.getDate()].join('-');
-      date.push(now);
-      now = new Date(+new Date(now) + oneDay);
-    }
-    date.push(new Date().toLocaleDateString().split('/').join('-'));
-    console.log(date)
-  }
-
-  pickDate({
-    minTime:'2019,4,26'
-  })
+// 旋转
+transform: rorate(90deg)
+transform-origin: [ <percentage> | <length> | left | center① | right ] [ <percentage> | <length> | top | center② | bottom ]

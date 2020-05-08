@@ -1,4 +1,37 @@
-     ********** git **************
+
+- <icons> <Splite>标签
+- 二级路由，vuex管理，其他包的配置等怎么配
+- ui组件库iview,vuetify，element-ui混用
+- 新增方案看不到效果啊
+
+
+
+**********ocloud-bi**************
+新建开发页面，
+1、在./src/views 目录下新建页面组件
+2、在./src/views/index.js文件中导入，再导出
+3、./examples/datas/index.js 
+funcs 数组中添加一对象，修改funcname[页面名称],funcpath[页面路由],url[指向组件（`OcvBi${导出组件的名字}`）],icon[修改icon图标]
+**********ocloud-bi**************
+
+
+
+**************vue-cli-service*********    
+// 构建及参数配置
+vue-cli-service build [options] [entry]
+--mode // 指定环境模式 默认：production
+--dest //指定输出目录 默认：dist
+--modern // 面向现代浏览器带自动回退地构建应用
+--target // app | lib | wc | wc-async （默认值：app）
+--name // 库或者Web Components 模式下的名字 默认：pakeage.json中的name字段或者入口文件名
+--no-clean // 在构建目标之前不清楚目标目录
+--report  // 生成report.html以帮助分析内容
+--report-json // 生成report.json 帮助分析包内容
+--watch // 监听文件的变化
+
+**************vue-cli-service*********    
+
+	********** git **************
 git config template 
 git cz
 git checkout -b dev origin/dev //clone分支代码
@@ -37,34 +70,18 @@ git remote show origin
 连接服务器 ssh admin@192.168.7.22
 解压压缩文件 unzip  -o  dist.zip (解压并覆盖)
       *******命令行********
+	  
+**************node*****************
+//npm 设置淘宝镜像
+npm install cnpm -g --registry=https://registry.npm.taobao.org // 安装
+npm config set registry http://registry.npm.taobao.org/ // 设置淘宝镜像
+npm config set registry https://registry.npmjs.org/ // 原镜像
+npm get registry // 获取镜像
+
+**************node*****************
 
       *******公司********
-需UI
-1、无数据的图片
-2、404的页面
-
-
-
-数据库备份接口对接：
-已完成：
-1、数据库数据资源的数据库和资源列表获取
-有问题：
-1、接口地址：http://192.168.7.22:9010/api/bakup/queryPage
-备份记录获取接口，自动备份任务返回没有备份的周期、清理阈值、执行时间、是否启用数据
-2、删除备份任务接口：http://192.168.7.22:9010/api/bakup/delete
-返回删除成功，但是刷新备份记录，删除的记录依然存在
-3、已完成备份接口：http://192.168.7.22:9010/api/bakup/dataListPage
-返回数据有问题
-未开发：
-1、
-四月工作：
-前端页面开发；前端规范化：代码，webgis代码，组件标准化的封装（方法，参数命名）；二维开发
-负责前端页面开发和前端规范化（代码、组件标准化封装）
-数据库备份接口，
-vue培训，
-单体化前端优化，
-页面刷新状态保持，
-版本稳定
+周报填写路径，\\192.168.100.100\Cnovit\12-研发中心\01内部公共目录\部门周报
 
 密码修改：https://self.51bsi.com/BSIPM/PersonMgr/PWD
 打印机 \\192.168.100.252
